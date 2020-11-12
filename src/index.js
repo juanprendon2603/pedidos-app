@@ -5,7 +5,5 @@ const app = require('./server');
 require('./database');
 
 // Server is listening
-app.listen(app.get('port'), () => {
-  console.log('Server on port', app.get('port'));
-  console.log('Environment:', process.env.NODE_ENV);
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
