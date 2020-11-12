@@ -28,5 +28,9 @@
     "dotenv": "^8.2.0",
     "handlebars": "^4.7.6",
     "nodemon": "^2.0.4"
+  }, 
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
   }
 }
