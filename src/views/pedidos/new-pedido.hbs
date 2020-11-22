@@ -5,37 +5,49 @@
     </div>
     <div class="card-body">
       <form action="/pedidos/new-pedido" method="POST">
-        <div class="form-group">
+                <div class="form-group">
                     <input type="date" name="fecha" class="form-control" placeholder="Fecha"
-                    autofocus>
+                    ><small id="passwordHelp" class="form-text text-muted">Seleccionar fecha a partir de mañana</small>
+                </div>
+                 <div class="form-group">
+                    <input type="time" name="hora" class="form-control" placeholder="Hora"
+                    >
                 </div>
                 <div class="form-group">
                     <input type="text" name="cliente" class="form-control" placeholder="Cliente"
-                    autofocus>
+                    >
                 </div>
                 <div class="form-group">
-                    <input type="text" name="telefono" class="form-control" placeholder="Telefono"
-                    autofocus>
+                    <input type="number" name="telefono" class="form-control" placeholder="Telefono"
+                    >
                 </div>
                 <div class="form-group">
-                    <input type="text" name="tipo" class="form-control" placeholder="Tipo pastel"
-                    autofocus>
+                    <label for="exampleFormControlSelect1">Tipo de torta</label>
+                    <select type="text" name="tipo" class="form-control" placeholder="Tipo pastel">
+                    <option>Normal</option>
+                    <option>Fria</option>
+                    <option>Genovesa</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="tamaño" class="form-control" placeholder="Tamaño"
-                    autofocus>
+                    <label for="exampleFormControlSelect1">Tamaño</label>
+                    <select type="text" name="tamaño" class="form-control" placeholder="Tamaño">
+                    <option>Octavo</option>
+                    <option>Cuarto</option>
+                    <option>Media</option>
+                    <option>Libra</option>
+                    <option>Libra y cuarto</option>
+                    <option>2 Libras</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <input type="text" name="decoracion" class="form-control" placeholder="Decoracion"
-                    autofocus>
+                    >
                 </div>
+                
                  <div class="form-group">
-                    <input type="text" name="hora" class="form-control" placeholder="Hora"
-                    autofocus>
-                </div>
-                 <div class="form-group">
-                    <input type="text" name="valor" class="form-control" placeholder="Valor"
-                    autofocus>
+                    <input type="number" name="valor" class="form-control" placeholder="Valor"
+                    >
                 </div>
                  <div class="form-group">
                     <textarea type="text" name="detalles" class="form-control" placeholder="Detalles"
@@ -43,7 +55,7 @@
                 </div>
                  <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit">
-                        Guardar
+                        Guardar 
                     </button>
                 </div>
       </form>

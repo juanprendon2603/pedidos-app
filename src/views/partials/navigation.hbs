@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="/">Pasteleria Nancy</a>
+    <a class="navbar-brand" href="/">Pasteleria Nancy <i class="fas fa-birthday-cake"></i> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span> <i class="fas fa-home"></i> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">Nosotros</a>
+            <a class="nav-link" href="/about">Nosotros <i class="fas fa-info-circle"></i> </a>
           </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -18,20 +18,22 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Pedidos 
+              <i class="fas fa-paste"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/pedidos">Todos los pedidos</a>
-              <a class="dropdown-item" href="/pedidos/add">Añadir un pedido</a>
+              <a class="dropdown-item" href="/pedidos">Todos los pedidos <i class="fas fa-folder-open"></i> </a>
+              <a class="dropdown-item" href="/pedidos/add">Añadir un pedido <i class="fas fa-file-medical"></i> </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/users/logout">Salir</a>
+              <a class="dropdown-item" href="/users/logout">Salir <i class="fas fa-sign-out-alt"></i>
+ </a>
             </div>
           </li>
         {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="/users/signin">Ingresar</a>
+            <a class="nav-link" href="/users/signin">Ingresar <i class="fas fa-user"></i> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/users/signup">Registrar</a>
+            <a class="nav-link" href="/users/signup">Registrar <i class="fas fa-user-plus"></i> </a>
           </li>
         {{/if}}
       </ul>

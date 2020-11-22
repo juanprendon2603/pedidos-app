@@ -13,11 +13,21 @@ pedidosCtrl.createNewPedido = async (req, res) => {
      if(!fecha) {
          errors.push({text: 'Por favor seleccione una fecha'});
      }
-     if(!cliente){
+     var moment = require('moment');
+    if( moment(fecha).isBetween( moment('2000-01-01'), moment() ) ){
+        errors.push({text: 'La fecha es incorrecta'});
+      }
+    if(!cliente){
         errors.push({text: 'Por favor escriba el nombre del cliente'});
     }
     if(!telefono){
         errors.push({text: 'Por favor escriba el telefono del cliente'});
+    }
+    if(telefono.length > 10){
+      errors.push({text: 'Por favor escriba un numero de telefono valido'});
+    }
+    if(telefono.length < 7){
+    errors.push({text: 'Por favor escriba un numero de telefono valido'});
     }
     if(!tipo){
         errors.push({text: 'Por favor seleccione una fecha'})

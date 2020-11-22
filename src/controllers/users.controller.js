@@ -14,10 +14,10 @@ usersCtrl.singup = async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;
   if (password != confirm_password) {
-    errors.push({ text: "Passwords do not match." });
+    errors.push({ text: "Contraseñas no conciden" });
   }
   if (password.length < 4) {
-    errors.push({ text: "Passwords must be at least 4 characters." });
+    errors.push({ text: "Contraseña al menos de 4 caracteres" });
   }
   if (errors.length > 0) {
     res.render("users/signup", {
@@ -31,14 +31,14 @@ usersCtrl.singup = async (req, res) => {
     // Look for email coincidence
     const emailUser = await User.findOne({ email: email });
     if (emailUser) {
-      req.flash("error_msg", "The Email is already in use.");
+      req.flash("error_msg", "Este email ya esta en uso");
       res.redirect("/users/signup");
     } else {
       // Saving a New User
       const newUser = new User({ name, email, password });
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
-      req.flash("success_msg", "You are registered.");
+      req.flash("success_msg", "Reistro Exitoso");
       res.redirect("/users/signin");
     }
   }
@@ -56,7 +56,7 @@ usersCtrl.signin = passport.authenticate("local", {
 
 usersCtrl.logout = (req, res) => {
   req.logout();
-  req.flash("success_msg", "You are logged out now.");
+  req.flash("success_msg", "Sesion Finalizada");
   res.redirect("/users/signin");
 };
 
